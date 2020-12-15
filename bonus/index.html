@@ -12,12 +12,14 @@
         <div class="container" id="slideApp">
             <div class="slider-wrapper">
                 <div class="prev" @click="prevArrow">
+                    <div @keyup.37="prevArrow"></div>
                     <i class="fas fa-angle-left"></i>
                 </div>
                 <div class="images">
                     <img class="active" v-bind:src="images[index]">
                 </div>
                 <div class="next" @click="nextArrow">
+                    <div @keyup.39="nextArrow"></div>
                     <i class="fas fa-angle-right"></i>
                 </div>
                 <div class="nav">

@@ -18,14 +18,26 @@ let slideApp = new Vue ({
             }
         },
         circleClick (){
-        
-                this.index = 3;
-            
+            this.index = 3;     
             
         }        
     },
     created () {
-        setInterval(this.nextArrow, 1000000);
+        setInterval(this.nextArrow, 3000);
+    },
+    mounted() {
+        window.addEventListener('keyup', e => {
+
+            if (e.keyCode === 39) { 
+                this.nextArrow()
+            }
+        }),
+        window.addEventListener('keyup', e => {
+
+            if (e.keyCode === 37) {
+                this.prevArrow()
+            }
+        })
     }
     
 })
