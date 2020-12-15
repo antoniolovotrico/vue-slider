@@ -11,13 +11,13 @@
     <body>
         <div class="container" id="slideApp">
             <div class="slider-wrapper">
-                <div class="prev">
+                <div class="prev" @click="prevArrow">
                     <i class="fas fa-angle-left"></i>
                 </div>
                 <div class="images">
-                    <img class="active" v-bind:src="images[0]">
+                    <img class="active" v-bind:src="images[index]">
                 </div>
-                <div class="next">
+                <div class="next" @click="nextArrow">
                     <i class="fas fa-angle-right"></i>
                 </div>
                 <div class="nav">
