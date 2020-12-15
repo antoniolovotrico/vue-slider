@@ -9,16 +9,13 @@
         <title>Vue-Slider</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="slideApp">
             <div class="slider-wrapper">
                 <div class="prev">
                     <i class="fas fa-angle-left"></i>
                 </div>
                 <div class="images">
-                    <img class="active first" src="assets/img/1.jpg" alt="">
-                    <img src="assets/img/2.jpg" alt="">
-                    <img src="assets/img/3.jpg" alt="">
-                    <img class="last" src="assets/img/4.jpg" alt="">
+                    <img class="active" v-bind:src="images[0]">
                 </div>
                 <div class="next">
                     <i class="fas fa-angle-right"></i>
