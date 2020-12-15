@@ -17,6 +17,9 @@ let slideApp = new Vue ({
                 this.index = this.images.length -1;
             }
         }        
+    },
+    created () {
+        setInterval(this.nextArrow, 3000);
     }
     
 })
